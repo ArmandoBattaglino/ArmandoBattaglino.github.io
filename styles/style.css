@@ -1,0 +1,314 @@
+.root {
+  --main-color: #e00025;
+  --button-color: #585858;
+  --screen-color: #99cb9a;
+  --border-color: #310000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.global-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+  width: 80%;
+}
+
+/* Parte sinistra del Pokédex */
+
+.left {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px #310000;
+  background-color: #e00025;
+  width: 50%;
+}
+
+.left section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 100%;
+}
+
+.left section:not(:last-child) {
+  border-bottom: 3px solid #310000;
+}
+
+/* Sezione in alto a sinistra */
+
+.left .top .big-light {
+  width: 100px;
+  height: 100px;
+  background-color: #3298cb;
+  border: 5px solid #310000;
+  border-radius: 50%;
+}
+
+.small-light-container {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px
+}
+
+.small-light-container div {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 4px solid #310000 ;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.yellow {
+  background-color: #fecb65;
+}
+
+.green {
+  background-color: #32cb65;
+}
+
+/* Sezione in mezzo a sinistra */
+
+.left .middle {
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+  border: 3px solid #310000;
+  border-radius: 0 0 0 15%;
+  background-color: white;
+  padding: 10px;
+}
+
+.image-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #99cb9a;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #310000;
+  border-radius: 0 0 0 15%;
+  padding: 10px;
+}
+
+.image-screen p {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* Sezione in basso a sinistra */
+
+.left .bottom {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container input {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 45px;
+    padding-left: 8px;
+    color: white;
+    background-color: #585858;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 3px #a5a5a5 solid;
+    box-shadow: 3px 3px #310000;
+}
+
+.button-container input:active {
+    background-color: #585858;
+    transform: translate(3px, 3px);
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: step-end;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+#error-alert {
+  display: flex;
+  align-items: center;
+  background-color: #99cb9a;
+  border: 3px solid #310000;
+  padding: 5px 3px;
+  line-height: 15px;
+  height: 61px;
+  width: 214px;
+}
+
+input[type=number] {
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+#insert-id {
+  padding: 5px;
+  border: 3px solid #310000;
+  background-color: #3298cb;
+  color: white;
+}
+
+#insert-id::placeholder {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.753);
+}
+
+/* Parte destra del Pokédex */
+
+.right {
+  display: flex;
+  flex-direction: column;
+  border: solid 3px #310000;
+  background-color: #e00025;
+  width: 50%;
+}
+
+.right section {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.right .top {
+  height: 25%;
+}
+
+.right .bottom {
+  height: 25%;
+}
+
+.right section:not(:last-child) {
+  border-bottom: 3px solid #310000;
+}
+
+.right .middle {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  text-transform: capitalize;
+
+}
+
+.poke-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #99cb9a;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #310000;
+  padding: 35px 0;
+}
+
+.poke-info * {
+  margin: 0;
+}
+
+.types {
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.pokemon-body {
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container-right {
+  margin-top: 20px;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.button-container-right .up {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-container-right .down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-digit {
+  width: 65px;
+  height: 65px;
+  background-color: #3298cb;
+  border-radius: 10%;
+  border: 3px solid #310000;
+}

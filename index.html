@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="global-container">
+
+        <!-- Sezione Sinistra del Pokedex -->
+        <section class="left">
+            <section class="top">
+                <div class="big-light">
+                </div>
+                <div class="small-light-container">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+            </section>
+            <section class="middle">
+                <div class="image-container">
+                    <div class="image-screen">
+                        <!-- Immagine del Pokemon -->
+                    </div>
+                </div>
+            </section>
+            <section class="bottom">
+                <div class="button-container">
+                    <input type="reset" form="search-id" name="reset-btn" id="reset-btn" value="R">
+                    <input type="submit" form="search-id" name="send" id="send" value="S">
+                </div>
+                <form id="search-id" class="poke-form">
+                    <!-- L'utente inserisce l'id del Pokemon -->
+                    <label for="insert-id" id="error-alert">
+                        <!-- Messaggio di errore -->
+                    </label>
+                    <input type="number" name="insert-id" id="insert-id" placeholder="Inserisci l'ID del Pokémon">
+                </form>
+                <div class="cross-navigator"></div>
+            </section>
+        </section>
+
+        <!-- Sezione destra del Pokedex -->
+        <section class="right">
+            <section class="top"></section>
+            <section class="middle">
+                <div class="poke-info">
+                    <!-- Appariranno le info sul Pokémon -->
+                    <div class="types"></div>
+                    <div class="pokemon-body"></div>
+                </div>
+                <div class="button-container-right">
+                  <div class="up">
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                  </div>
+                  <div class="down">
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                      <div class="button-digit"></div>
+                  </div>
+                </div>
+            </section>
+            <section class="bottom"></section>
+        </section>
+    </div>
+
+    <script src="./js/pokedex.js"></script>
+</body>
+</html>
